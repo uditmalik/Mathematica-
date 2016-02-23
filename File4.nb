@@ -1,0 +1,163 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5594,        154]
+NotebookOptionsPosition[      5282,        138]
+NotebookOutlinePosition[      5622,        153]
+CellTagsIndexPosition[      5579,        150]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"knot", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+    "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1.5", ",", "2", ",", 
+     "2", ",", "2", ",", "2"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pt", " ", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2.8", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3.8", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"5", ",", "2.5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"6", ",", "0"}], "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plot", " ", "=", " ", 
+   RowBox[{"BSplineFunction", "[", "pt", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"curve", " ", "=", " ", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thickness", "[", ".01", "]"}], ",", " ", 
+      RowBox[{"BSplineCurve", "[", 
+       RowBox[{"pt", ",", " ", 
+        RowBox[{"SplineKnots", "\[Rule]", "knot"}]}], "]"}]}], "}"}], "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"cvpoints", " ", "=", " ", 
+    RowBox[{"Graphics", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"PointSize", "[", ".05", "]"}], ",", " ", "Green", ",", " ", 
+       RowBox[{"Point", "[", "pt", "]"}], ",", "Cyan", " ", ",", " ", 
+       RowBox[{"Line", "[", "pt", "]"}]}], "}"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{"curve", ",", "cvpoints", ",", " ", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"PointSize", "[", ".1", "]"}], ",", " ", "Red", ",", " ", 
+        RowBox[{"Point", "[", 
+         RowBox[{"Dynamic", "[", 
+          RowBox[{"plot", "[", "x", "]"}], "]"}], "]"}]}], "}"}], "]"}]}], 
+    "\[IndentingNewLine]", "]"}], ",", " ", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.656723973183878*^9, 3.656723985783826*^9}, {
+   3.6567240478395452`*^9, 3.656724080289092*^9}, {3.6567241187337904`*^9, 
+   3.65672412576674*^9}, {3.6567241563223677`*^9, 3.6567241673750215`*^9}, {
+   3.65672422314778*^9, 3.6567243342149334`*^9}, {3.6567246422225456`*^9, 
+   3.6567246730171466`*^9}, {3.6567247078949404`*^9, 
+   3.6567247479594145`*^9}, {3.6567247824210186`*^9, 3.6567247933998146`*^9}, 
+   3.6567830520265636`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`x$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`x$$], 0, 1}}, Typeset`size$$ = {360., {95., 99.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`x$718$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`x$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`x$$, $CellContext`x$718$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Show[$CellContext`curve, $CellContext`cvpoints, 
+        Graphics[{
+          PointSize[0.1], Red, 
+          Point[
+           Dynamic[
+            $CellContext`plot[$CellContext`x$$]]]}]], 
+      "Specifications" :> {{$CellContext`x$$, 0, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {140., 147.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.6567238982015343`*^9, 3.6567239904701557`*^9, 3.6567240599112244`*^9, {
+   3.6567241215069637`*^9, 3.656724128435859*^9}, 3.6567241752760983`*^9, {
+   3.6567242379543953`*^9, 3.656724337047724*^9}, {3.656724723448017*^9, 
+   3.6567247510315995`*^9}, {3.656724785836472*^9, 3.656724796054731*^9}, 
+   3.656783056148129*^9, 3.656783098692877*^9}]
+}, Open  ]]
+},
+WindowSize->{1350, 685},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 7, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2639, 68, 232, "Input"],
+Cell[3222, 92, 2044, 43, 337, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

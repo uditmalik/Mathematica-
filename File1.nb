@@ -1,0 +1,194 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      6560,        185]
+NotebookOptionsPosition[      6062,        163]
+NotebookOutlinePosition[      6434,        179]
+CellTagsIndexPosition[      6391,        176]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+CSE 477 G. Farin
+HW 1, due 9/16 , midnight 
+\
+\>", "Text",
+ CellChangeTimes->{{3.5359856622878494`*^9, 3.5359857281667647`*^9}, {
+  3.535985765701232*^9, 3.5359857888048725`*^9}, {3.5363710720880747`*^9, 
+  3.536371077015356*^9}, {3.6318795277258587`*^9, 3.631879535791073*^9}, {
+  3.631907670956932*^9, 3.631907678491745*^9}, {3.6508048758234034`*^9, 
+  3.650804912554504*^9}},
+ FontFamily->"Arial",
+ FontSize->18,
+ FontWeight->"Bold"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Turn in via Blackboard
+Name your file lastname_firstname_HW1.nb
+\
+\>", "Subsection",
+ CellChangeTimes->{{3.631878426375361*^9, 3.631878534109702*^9}}],
+
+Cell["\<\
+
+Let a family of 3D polygons be given by [cos[i],  sin[i], k] with 0<= i <= 7 \
+and k=1,...,10.
+Plot the polygons.
+Make one of them dynamic using Manipulate.
+Use colors.\
+\>", "Text",
+ CellChangeTimes->{
+  3.535985879877833*^9, {3.535990944707529*^9, 3.5359910220056643`*^9}, {
+   3.5359910657949414`*^9, 3.535991075186158*^9}, {3.5359912283784266`*^9, 
+   3.5359912439628544`*^9}, {3.5359913238505945`*^9, 
+   3.5359913242717953`*^9}, {3.535991424969972*^9, 3.535991443783605*^9}, {
+   3.5363534533343396`*^9, 3.536353454902429*^9}, {3.5363707619443355`*^9, 
+   3.5363707646954927`*^9}, 3.6508049191738825`*^9, {3.6508049682036867`*^9, 
+   3.6508050544366193`*^9}, {3.650805093330844*^9, 3.650805177429654*^9}},
+ FontFamily->"Arial",
+ FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Show", "[", 
+     RowBox[{
+      RowBox[{"Graphics3D", "[", 
+       RowBox[{"Polygon", "[", "\[IndentingNewLine]", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Cos", "[", "i", "]"}], ",", 
+            RowBox[{"Sin", "[", "i", "]"}], ",", "k"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"k", ",", "1", ",", "10"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "0", ",", "7"}], "}"}]}], " ", 
+         "\[IndentingNewLine]", "]"}], " ", "\[IndentingNewLine]", "]"}], 
+       "\[IndentingNewLine]", "]"}], ",", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Displays", " ", "the", " ", "polygons"}], " ", "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"Graphics3D", "[", 
+       RowBox[{"{", 
+        RowBox[{"Blue", ",", 
+         RowBox[{"Polygon", "[", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Cos", "[", "i", "]"}], ",", 
+              RowBox[{"Sin", "[", "i", "]"}], ",", "k"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "0", ",", "7"}], "}"}]}], "]"}], "]"}]}], 
+        "}"}], "]"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "1", ",", "10"}], "}"}]}], "\[IndentingNewLine]", 
+   "]"}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwdzWkog3EAx/G5S5hcTbEm90ImbTneOPZmUZvkeEokx4unOZNRRJQU5l5y
+5UiISWI5X1m8cYTQpDSbY64mR3PE8/u/+PZ5+fXLL00rtGaxWIFMkMeTVV9F
+PyRI9NpayLVLaYNXBd5KuEK/G6CusecG1p1OmKFXs5lYxD/5gIuW+k/YIC6a
+uGZMtFTMwdRg513I0/YS5YqzR/jc8v0DDSIHjoEx5c4YAlfi3cKhYmxVALnV
+b4lQ3apKhnSETgpnbeNk8O7cJhNSYU7ELUpVBo+aJomx9tY18Cvd2Azd/A8G
+YIn2khjVvTMC6/b3RiHfseoCJisa9NBiPrQ34iesdIFB6/LQW8al06VIeNBF
+S6HHVrAMZlFs33vGIZGGC/kiTyFkz2/GwIhhdQeknjP64ParbgC++bwOwjZf
+XYCJcc2dDoJ5aU5COC5+EkHOYZYYunrTxJxyQQYc+psivsut1iG7r5iYLXmU
+vDDqO/kyWGAap2BuR1IeDHQUlENlv7QR/p50tsO4Wi1Rue3aA9X3QhVMt+FM
+Qw13YwYuX0wuQMuxifgPDRc8TQ==
+  "]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`k$$ = 2.7700550079345927`, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`k$$], 1, 10}}, Typeset`size$$ = {171., {255., 263.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`k$43442$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`k$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`k$$, $CellContext`k$43442$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Graphics3D[
+         Polygon[
+          Table[{
+            Cos[$CellContext`i], 
+            Sin[$CellContext`i], $CellContext`k$$}, {$CellContext`k$$, 1, 
+            10}, {$CellContext`i, 0, 7}]]], 
+        Graphics3D[{Blue, 
+          Polygon[
+           Table[{
+             Cos[$CellContext`i], 
+             Sin[$CellContext`i], $CellContext`k$$}, {$CellContext`i, 0, 
+             7}]]}]], "Specifications" :> {{$CellContext`k$$, 1, 10}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{307., {307., 314.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.651632141249323*^9, 3.6516322423763356`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>1.2 Inherited,
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 7, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 446, 12, 102, "Text"],
+Cell[CellGroupData[{
+Cell[1028, 36, 160, 5, 129, "Subsection"],
+Cell[1191, 43, 759, 17, 156, "Text"],
+Cell[CellGroupData[{
+Cell[1975, 64, 2082, 50, 221, "Input"],
+Cell[4060, 116, 1974, 43, 641, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
